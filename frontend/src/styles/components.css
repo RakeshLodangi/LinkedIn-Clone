@@ -1,0 +1,152 @@
+/* ========== Base Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f6f5;
+}
+
+/* ================================
+   📝 POST FORM (Create Post)
+   ================================ */
+.post-form {
+  background-color: #fff;
+  border: 1px solid #e2e8e4;
+  border-radius: 10px;
+  padding: 16px 20px;
+  max-width: 620px;
+  width: 100%;
+  margin: 24px auto;
+  transition: border 0.2s ease;
+}
+
+.post-form:hover {
+  border-color: #c5d8c4;
+}
+
+/* Form elements */
+.post-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Textarea */
+.post-form textarea {
+  width: 100%;
+  min-height: 90px;
+  border: 1px solid #d4e0d4;
+  border-radius: 8px;
+  background: #fafcf9;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.post-form textarea:focus {
+  border-color: #2e7d32;
+  background: #fff;
+}
+
+/* Error text */
+.error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  padding: 4px 0;
+}
+
+/* Post button */
+.post-form button {
+  align-self: flex-end;
+  padding: 8px 20px;
+  background-color: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.1s ease;
+}
+
+.post-form button:hover {
+  background-color: #1b5e20;
+  transform: translateY(-1px);
+}
+
+/* ================================
+   💬 POST CARD (Feed)
+   ================================ */
+.post-card {
+  background-color: #fff;
+  border: 1px solid #e2e8e4;
+  border-radius: 10px;
+  padding: 16px 20px;
+  max-width: 620px;
+  width: 100%;
+  margin: 16px auto;
+  transition: border-color 0.2s ease;
+}
+
+.post-card:hover {
+  border-color: #c5d8c4;
+}
+
+/* Header section */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-header strong {
+  color: #1b5e20;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.post-date {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* Content */
+.post-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  margin-top: 6px;
+}
+
+/* Optional Image */
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 768px) {
+  .post-form,
+  .post-card {
+    width: 92%;
+    padding: 14px 16px;
+  }
+
+  .post-form button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
