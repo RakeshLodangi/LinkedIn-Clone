@@ -29,8 +29,9 @@ app.get("/", (req, res) =>
   res.json({ success: true, data: "LinkedIn Clone API running" })
 );
 
-app.use("/api/auth", authRoutes);
-app.use("/api/posts", postRoutes);
+app.use("/auth", authRoutes);
+app.use("/posts", postRoutes);
+
 
 // Centralized error handler
 app.use(errorHandler);
